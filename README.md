@@ -2,34 +2,36 @@
 
 ```js
 // Variable declaration
-var x = 0;
-let x = 0;
+var x = 0; // ES5
+let x = 0; // ES6
 
 // Constant declaration
-const X = 0;
+const X = 0; // ES6
 
 // Arrow Functions
-function x(y) {}
-let x = y => {} // parentheses optional with one parameter
+function x(y) {} // ES5
+let x = y => {}  // ES6
 
-function x(a, b, c) {} 
-let x = (a, b, c) => {}
+function x(a, b, c) {}  // ES5
+let x = (a, b, c) => {} // ES6
 
 // Template literals
-var x = 'Release date: ' + date;
-let x = `Release Date: ${date}`;
+var x = 'Release date: ' + date; // ES5
+let x = `Release Date: ${date}`; // ES6
 
+// ES5
 var x = 'This text ' +
         'is on ' +
         'multiple lines';
 
+// ES6
 let x = `This text
          is on
          multiple lines`;        
 
 // Implicit returns
-function x(a, b, c) { return a + b + c; } 
-let x = (a, b, c) => a + b + c;
+function x(a, b, c) { return a + b + c; } // ES5 
+let x = (a, b, c) => a + b + c;           // ES6  
 
 // Key/property shorthand
 var x = { a: a, b: b, c: 0 }
