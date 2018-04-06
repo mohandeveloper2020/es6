@@ -44,7 +44,7 @@ var c = x.c;
 
 let {a, b, c} = x;
 
-// for of (array)
+// Iterate through array
 var x = [1, 2, 3];
 
 for (var i = 0; i < x.length; i++) {
@@ -54,7 +54,7 @@ for (let i of x) {
     console.log(i);
 }
 
-// default parameters
+// Default parameters
 let x = (a, b = 2) => {
     console.log(a + b);
 }
@@ -64,7 +64,7 @@ var x = function(a, b) {
 }
 x(1);
 
-// spread operator
+// Spread operator
 let x = [1, 2, 3];
 let y = ['a', 'b', 'c'];
 let z = [...x, ...y];
