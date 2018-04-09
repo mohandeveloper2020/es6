@@ -436,7 +436,7 @@ doFirst.then(doSecond);
 
 An example below using `XMLHttpRequest`, for demonstrative purposes only ([Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) would be the proper modern API to use).
 
-```
+```js
 // ES5 callback
 function makeRequest(method, url, callback) {
     var request = new XMLHttpRequest();
