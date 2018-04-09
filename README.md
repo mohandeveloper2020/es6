@@ -24,14 +24,14 @@ ECMAScript 2015, also known as ES6, introduced many changes to JavaScript. Here 
 - [Method definition shorthand](#method-properties-shorthand)
 - [Array iteration (looping)](#array-iteration-looping)
 - [Default parameters](#default-parameters)
-- [Spread operator](#spread-operator)
+- [Spread syntax](#spread-syntax)
 - [Classes/constructor functions](#classesconstructor-functions)
 - [Inheritance](#inheritance)
 - [Modules - export/import](#modules---exportimport)
 
 ## Variables and constant feature comparison
 
-I explain the concepts of scope and the differences between `let`, `var`, and `const` in the [Understanding Variables, Scope, and Hoisting in JavaScript](https://www.digitalocean.com/community/tutorials/understanding-variables-scope-hoisting-in-javascript) resource on DigitalOcean.
+I explain the concepts of scope and the differences between `let`, `var`, and `const` in the [Understanding Variables, Scope, and Hoisting in JavaScript](https://www.digitalocean.com/community/tutorials/understanding-variables-scope-hoisting-in-javascript) resource on DigitalOcean. This table provides a brief overview.
 
 | Keyword                                                                                       | Scope          | Hoisting | Can Be Reassigned | Can Be Redeclared |
 | --------------------------------------------------------------------------------------------- | -------------- | -------- | ----------------- | ----------------- |
@@ -40,6 +40,8 @@ I explain the concepts of scope and the differences between `let`, `var`, and `c
 | [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) | Block scope    | No       | No                | No                |
 
 ## Variable declaration
+
+ES6 introduced the `let` keyword, which allows for block-scoped variables which cannot be hoisted or redeclared.
 
 ```js
 // ES5
@@ -51,14 +53,22 @@ var x = 0;
 let x = 0;
 ```
 
+- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+
 ## Constant declaration
+
+ES6 introduced the `const` keyword, which cannot be redeclared or reassigned, but is not immutable.
 
 ```js
 // ES6
 const CONST_IDENTIFIER = 0; // constants are uppercase by convention
 ```
 
+- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+
 ## Arrow functions
+
+The arrow function expression syntax is a shorter way of creating a function expression. Arrow functions do not have their own `this`, do not have prototypes, cannot be used for constructors, and should not be used as object methods.
 
 ```js
 // ES5
@@ -71,6 +81,8 @@ var func = function(a, b, c) {}  // function expression
 let func = a => {}         // parentheses optional with one parameter
 let func = (a, b, c) => {} // parentheses required with multiple parameters
 ```
+
+- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
 ## Template literals
 
@@ -222,6 +234,8 @@ for (let i of arr) {
 
 ## Default parameters
 
+Functions can be initialized with default parameters, which will be used only if an argument is not invoked through the function.
+
 ```js
 // ES5
 var func = function(a, b) {
@@ -242,7 +256,11 @@ func(10);   // returns 12
 func(10, 5) // returns 15
 ```
 
-## Spread operator
+- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+
+## Spread syntax
+
+Spread syntax can be used to expand an array.
 
 ```js
 // ES6
@@ -252,6 +270,20 @@ let arr3 = [...arr1, ...arr2];
 
 console.log(arr3); // [1, 2, 3, "a", "b", "c"]
 ```
+
+Spread syntax can be used for function arguments.
+
+```js
+// ES6
+let arr1 = [1, 2, 3];
+
+let func = (a, b, c) => a + b + c;
+func(...arr1);
+
+console.log(func(...arr1);); // 6 
+```
+
+- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 ## Classes/constructor functions
 
