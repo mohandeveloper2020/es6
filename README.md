@@ -277,18 +277,27 @@ class Inheritance extends ExampleClass {
 }
 
 const example2 = new Inheritance(3, 4, 5);
-example.product(); //60
+example.product(); // 60
+```
 
-// modules
-//<script src="export.js"></script>
-//<script type="module" src="import.js"></script>
+### Modules 
 
+```html
+<script src="export.js"></script>
+<script type="module" src="import.js"></script>
+```
+
+```js
 // export.js
-let x = y => y + y;
-let z = 0;
+let func = a => a + a;
+let obj = {};
+let x = 0;
 
-export { x, z };
+export { func, obj, x };
+```
 
+```js
 // import.js
-import { x, z } from './export.js';
-console.log(x(3), z);
+import { func, obj, x } from './export.js';
+console.log(func(3), obj, x);
+```
