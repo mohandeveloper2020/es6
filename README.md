@@ -74,8 +74,7 @@ let func = (a, b, c) => {} // parentheses required with multiple parameters
 
 ### Concatenation/string interpolation
 
-Expressions can be embedded in template literal strings. ([MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Expression_interpolation))
-
+Expressions can be embedded in template literal strings.
 
 ```js
 // ES5
@@ -86,6 +85,8 @@ var str = 'Release date: ' + date;
 // ES6
 let str = `Release Date: ${date}`;
 ```
+
+- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Expression_interpolation)
 
 ### Multi-line strings
 
@@ -105,7 +106,7 @@ let str = `This text
            multiple lines`;        
 ```
 
-[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Multi-line_strings)
+- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Multi-line_strings)
 
 ## Implicit returns
 
@@ -121,7 +122,7 @@ function func(a, b, c) { return a + b + c; }
 let func = (a, b, c) => a + b + c; // curly brackets must be omitted
 ```
 
-[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Function_body)
+- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Function_body)
 
 ## Key/property shorthand
 
@@ -143,7 +144,7 @@ let obj = {
 }
 ```
 
-[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Property_definitions)
+- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Property_definitions)
 
 ## Method definition shorthand
 
@@ -169,7 +170,7 @@ let obj = {
 obj.a(); // call method a
 ```
 
-[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 
 ## Object matching shorthand
 
@@ -191,7 +192,7 @@ var c = obj.c;
 let {a, b, c} = obj;
 ```
 
-[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#New_notations_in_ECMAScript_2015)
+- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#New_notations_in_ECMAScript_2015)
 
 ## Array iteration (looping)
 
@@ -215,7 +216,7 @@ for (let i of arr) {
 }
 ```
 
-[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ## Default parameters
 
