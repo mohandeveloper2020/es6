@@ -1,6 +1,6 @@
-# ES6 Syntax
+# ECMAScript6 Syntax Reference
 
-## Quick reference and comparison with ES5 where applicable.
+Quick ES6 reference and comparison with ES5 where applicable.
 
 > **Note:** I'll be using `let` in place of `var` for all ES6 examples.
 
@@ -13,7 +13,23 @@
 - Variable: `x`
 - String: `str`
 
-### Variables and constant keyword comparison
+## Table of contents
+
+- [Variable declaration](#variable-declaration)
+- [Constant declaration](#constant-declaration)
+- [Arrow function syntax](#arrow-functions)
+- [Template literals](#template-literals)
+- [Implicit returns](#implicit-returns)
+- [Key/property shorthand](#key-property-shorthand)
+- [Method properties shorthand](#method-properties-shorthand)
+- [Looping through an array](#looping-through-an-array)
+- [Default parameters](#default-parameters)
+- [Spread operator](#spread-operator)
+- [Classes/constructor functions](#classes-constructor-functions)
+- [Inheritance](#inheritance)
+- [Modules - export/import](#modules-export-import)
+
+## Variables and constant feature comparison
 
 | Keyword                                                                                       | Scope          | Hoisting | Can Be Reassigned | Can Be Redeclared |
 | --------------------------------------------------------------------------------------------- | -------------- | -------- | ----------------- | ----------------- |
@@ -21,7 +37,7 @@
 | [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)     | Block scope    | No       | Yes               | No                |
 | [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) | Block scope    | No       | No                | No                |
 
-### Variable declaration
+## Variable declaration
 
 ```js
 // ES5
@@ -33,15 +49,14 @@ var x = 0;
 let x = 0;
 ```
 
-
-### Constant declaration
+## Constant declaration
 
 ```js
 // ES6
 const CONST_IDENTIFIER = 0; // constants are uppercase by convention
 ```
 
-### Arrow functions
+## Arrow functions
 
 ```js
 // ES5
@@ -55,9 +70,9 @@ let func = a => {}         // parentheses optional with one parameter
 let func = (a, b, c) => {} // parentheses required with multiple parameters
 ```
 
-### Template literals
+## Template literals
 
-#### Concatenation/string interpolation
+### Concatenation/string interpolation
 
 ```js
 // ES5
@@ -69,23 +84,23 @@ var str = 'Release date: ' + date;
 let str = `Release Date: ${date}`;
 ```
 
-#### Multi-line strings
+### Multi-line strings
 
 ```js
 // ES5
 var str = 'This text ' +
-        'is on ' +
-        'multiple lines';
+          'is on ' +
+          'multiple lines';
 ```
 
 ```js
 // ES6
 let str = `This text
-         is on
-         multiple lines`;        
+           is on
+           multiple lines`;        
 ```
 
-### Implicit returns
+## Implicit returns
 
 ```js
 // ES5
@@ -97,8 +112,7 @@ function func(a, b, c) { return a + b + c; }
 let func = (a, b, c) => a + b + c; // curly brackets must be omitted
 ```
 
-
-### Key/property shorthand
+## Key/property shorthand
 
 ```js
 // ES5
@@ -118,7 +132,7 @@ let obj = {
 }
 ```
 
-### Method properties shorthand
+## Method properties shorthand
 
 ```js
 // ES5
@@ -136,10 +150,14 @@ let obj = {
 }
 ```
 
-### Object matching shorthand
+```js
+obj.a();
+```
+
+## Object matching shorthand
 
 ```js
-var x = { a: 1, b: 2, c: 3 };
+var obj = { a: 1, b: 2, c: 3 };
 ```
 
 ```js
@@ -154,7 +172,7 @@ var c = obj.c;
 let {a, b, c} = obj;
 ```
 
-### Looping through an array
+## Looping through an array
 
 ```js
 var arr = [1, 2, 3];
@@ -174,7 +192,7 @@ for (let i of arr) {
 }
 ```
 
-### Default parameters
+## Default parameters
 
 ```js
 // ES5
@@ -196,7 +214,7 @@ func(10);   // returns 12
 func(10, 5) // returns 15
 ```
 
-### Spread operator
+## Spread operator
 
 ```js
 // ES6
@@ -207,7 +225,7 @@ let arr3 = [...arr1, ...arr2];
 console.log(arr3); // [1, 2, 3, "a", "b", "c"]
 ```
 
-### Classes/constructor functions
+## Classes/constructor functions
 
 ```js
 // ES5
@@ -216,7 +234,7 @@ function ExampleConstructor(a, b) {
     this.b = b;
 }
 
-ExampleConstructor.prototype.sum = function () {
+ExampleConstructor.prototype.sum = function() {
     return this.a + this.b;
 }
 
@@ -243,7 +261,7 @@ let example1 = new ExampleClass(3, 4);
 example1.sum(); // returns 7
 ```
 
-### Inheritance
+## Inheritance
 
 ```js
 // ES5
@@ -254,7 +272,7 @@ function Inheritance(a, b, c) {
 }
 
 Inheritance.prototype = Object.create(ExampleConstructor.prototype);
-Inheritance.prototype.product = function () {
+Inheritance.prototype.product = function() {
     return this.a * this.b * this.c;
 }
 
@@ -280,10 +298,10 @@ const example2 = new Inheritance(3, 4, 5);
 example.product(); // 60
 ```
 
-### Modules 
+## Modules - export/import
 
 ```html
-// index.html
+<!-- index.html -->
 <script src="export.js"></script>
 <script type="module" src="import.js"></script>
 ```
