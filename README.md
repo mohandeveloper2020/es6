@@ -4,6 +4,14 @@ Quick reference
 
 > **Note:** I'll be using `let` in place of `var` for all ES6 examples.
 
+### `var`, `let`, `const`
+
+| Keyword                                                                                       | Scope          | Hoisting | Can Be Reassigned | Can Be Redeclared |
+| --------------------------------------------------------------------------------------------- | -------------- | -------- | ----------------- | ----------------- |
+| [`var`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)     | Function scope | Yes      | Yes               | Yes               |
+| [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)     | Block scope    | No       | Yes               | No                |
+| [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) | Block scope    | No       | No                | No                |
+
 ### Variable declaration
 
 ```js
