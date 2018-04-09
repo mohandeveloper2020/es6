@@ -297,7 +297,7 @@ const example2 = new Inheritance(3, 4, 5);
 ```
 
 ```js
-example.product(); // 60
+example2.product(); // 60
 ```
 
 ## Modules - export/import
