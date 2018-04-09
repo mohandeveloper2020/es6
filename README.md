@@ -1,10 +1,19 @@
 # ES5 vs ES6 Syntax
 
-Quick reference
+## Quick reference
 
 > **Note:** I'll be using `let` in place of `var` for all ES6 examples.
 
-### `var`, `let`, `const`
+## Key
+
+- Object: `obj`
+- Array: `arr`
+- Function: `func`
+- Parameter, method: `a`, `b`, `c`
+- Variable: `x`
+- String: `str`
+
+### Variables and constants
 
 | Keyword                                                                                       | Scope          | Hoisting | Can Be Reassigned | Can Be Redeclared |
 | --------------------------------------------------------------------------------------------- | -------------- | -------- | ----------------- | ----------------- |
@@ -29,21 +38,21 @@ let x = 0;
 
 ```js
 // ES6
-const X = 0; // constants are uppercase by convention
+const CONST_IDENTIFIER = 0; // constants are uppercase by convention
 ```
 
 ### Arrow functions
 
 ```js
 // ES5
-function x(y) {}        // function declaration
-var x = function(y) {}  // function expression
+function func(a, b, c) {}        // function declaration
+var func = function(a, b, c) {}  // function expression
 ```
 
 ```js
 // ES6
-let x = y => {}         // parentheses optional with one parameter
-let x = (a, b, c) => {} // parentheses required with multiple parameters
+let func = a => {}         // parentheses optional with one parameter
+let func = (a, b, c) => {} // parentheses required with multiple parameters
 ```
 
 ### Template literals
@@ -52,26 +61,26 @@ let x = (a, b, c) => {} // parentheses required with multiple parameters
 
 ```js
 // ES5
-var x = 'Release date: ' + date;
+var str = 'Release date: ' + date;
 ```
 
 ```js
 // ES6
-let x = `Release Date: ${date}`;
+let str = `Release Date: ${date}`;
 ```
 
 #### Multi-line strings
 
 ```js
 // ES5
-var x = 'This text ' +
+var str = 'This text ' +
         'is on ' +
         'multiple lines';
 ```
 
 ```js
 // ES6
-let x = `This text
+let str = `This text
          is on
          multiple lines`;        
 ```
@@ -80,12 +89,12 @@ let x = `This text
 
 ```js
 // ES5
-function x(a, b, c) { return a + b + c; } 
+function func(a, b, c) { return a + b + c; } 
 ```
 
 ```js
 // ES6
-let x = (a, b, c) => a + b + c; // curly brackets must be omitted
+let func = (a, b, c) => a + b + c; // curly brackets must be omitted
 ```
 
 
@@ -93,7 +102,7 @@ let x = (a, b, c) => a + b + c; // curly brackets must be omitted
 
 ```js
 // ES5
-var x = { 
+var obj = { 
     a: a, 
     b: b, 
     c: 0 
@@ -102,7 +111,7 @@ var x = {
 
 ```js
 // ES6
-let x = { 
+let obj = { 
     a, 
     b, 
     c: 0 
@@ -113,7 +122,7 @@ let x = {
 
 ```js
 // ES5
-var x = {
+var obj = {
     a: function(c, d) {},
     b: function(e, f) {}
 };
@@ -121,7 +130,7 @@ var x = {
 
 ```js
 // ES6
-let x = {
+let obj = {
     a(c, d) {},
     b(e, f) {}
 }
@@ -135,32 +144,32 @@ var x = { a: 1, b: 2, c: 3 };
 
 ```js
 // ES5
-var a = x.a;
-var b = x.b;
-var c = x.c;
+var a = obj.a;
+var b = obj.b;
+var c = obj.c;
 ```
 
 ```js
 // ES6
-let {a, b, c} = x;
+let {a, b, c} = obj;
 ```
 
 ### Looping through an array
 
 ```js
-var x = [1, 2, 3];
+var arr = [1, 2, 3];
 ```
 
 ```js
 // ES5
-for (var i = 0; i < x.length; i++) {
+for (var i = 0; i < arr.length; i++) {
     console.log(i);
 }
 ```
 
 ```js
 // ES6
-for (let i of x) {
+for (let i of arr) {
     console.log(i);
 }
 ```
@@ -169,7 +178,7 @@ for (let i of x) {
 
 ```js
 // ES5
-var x = function(a, b) {
+var func = function(a, b) {
     b = (b === undefined) ? 2 : b;
     return a + b;
 }
@@ -177,80 +186,98 @@ var x = function(a, b) {
 
 ```js
 // ES6
-let x = (a, b = 2) => {
+let func = (a, b = 2) => {
     return a + b;
 }
 ```
 
 ```js
-x(10);   // returns 12
-x(10, 5) // returns 15
+func(10);   // returns 12
+func(10, 5) // returns 15
 ```
 
 ### Spread operator
 
 ```js
-let x = [1, 2, 3];
-let y = ['a', 'b', 'c'];
-let z = [...x, ...y];
+// ES6
+let arr1 = [1, 2, 3];
+let arr2 = ['a', 'b', 'c'];
+let arr3 = [...arr1, ...arr2];
+
+console.log(arr3); // [1, 2, 3, "a", "b", "c"]
 ```
 
-console.log(z);
+### Classes/constructor functions
 
-// Classes
-function X(a, b) {
+```js
+// ES5
+function ExampleConstructor(a, b) {
     this.a = a;
     this.b = b;
 }
 
-X.prototype.d = function () {
-    console.log(this.a + this.b);
+ExampleConstructor.prototype.sum = function () {
+    return this.a + this.b;
 }
 
-var x = new X(1, 2);
-x.d();
+var example1 = new ExampleConstructor(3, 4);
 
-class X {
+example1.sum(); // returns 7
+```
+
+```js
+// ES6
+class ExampleClass {
     constructor(a, b) {
         this.a = a;
-        this.b = a;
+        this.b = b;
     }
 
-    d() {
-        console.log(this.a + this.b);
+    sum() {
+        return this.a + this.b;
     }
 }
 
-const x = new X(1, 2);
-x.d();
+let example1 = new ExampleClass(3, 4);
 
-// Inheritance
-function Y(a, b, c) {
-    X.call(this, a, b);
+example1.sum(); // returns 7
+```
+
+### Inheritance
+
+```js
+// ES5
+function Inheritance(a, b, c) {
+    ExampleConstructor.call(this, a, b);
 
     this.c = c;
 }
 
-Y.prototype = Object.create(X.prototype);
-Y.prototype.z = function () {
-    console.log(this.a + this.b + this.c);
+Inheritance.prototype = Object.create(ExampleConstructor.prototype);
+Inheritance.prototype.product = function () {
+    return this.a * this.b * this.c;
 }
-var y = new Y(1, 2, 3);
-y.z();
 
-class Y extends X {
+var example2 = new Inheritance(3, 4, 5);
+example2.product(); // 60
+```
+
+```js
+// ES6
+class Inheritance extends ExampleClass {
     constructor(a, b, c) {
         super(a, b);
 
         this.c = c;
     }
 
-    z() {
-        console.log(this.a + this.b + this.c);
+    product() {
+        return this.a * this.b * this.c;
     }
 }
-const y = new Y(1, 2, 3);
-y.z();
+
+const example2 = new Inheritance(3, 4, 5);
+example.product(); //60
 
 // modules
 //<script src="export.js"></script>
