@@ -2,7 +2,7 @@
 
 ECMAScript 2015, also known as ES6, introduced many changes to JavaScript. Here is an overview of some of the most common features and syntactical differences, with comparisons to ES5 where applicable.
 
-> **Note:** I'll be using `let` in place of `var` for all ES6 examples.
+> **Note:** A commonly accepted practice is to use `const` unless except in cases of loops and reassignment. However, in this resource I'll be using `let` in place of `var` for all ES6 examples.
 
 ## Key
 
@@ -20,16 +20,18 @@ ECMAScript 2015, also known as ES6, introduced many changes to JavaScript. Here 
 - [Arrow function syntax](#arrow-functions)
 - [Template literals](#template-literals)
 - [Implicit returns](#implicit-returns)
-- [Key/property shorthand](#key-property-shorthand)
+- [Key/property shorthand](#keyproperty-shorthand)
 - [Method definition shorthand](#method-properties-shorthand)
 - [Array iteration (looping)](#array-iteration-looping)
 - [Default parameters](#default-parameters)
 - [Spread operator](#spread-operator)
-- [Classes/constructor functions](#classes-constructor-functions)
+- [Classes/constructor functions](#classesconstructor-functions)
 - [Inheritance](#inheritance)
-- [Modules - export/import](#modules-export-import)
+- [Modules - export/import](#modules---exportimport)
 
 ## Variables and constant feature comparison
+
+I explain the concepts of scope and the differences between `let`, `var`, and `const` in the [Understanding Variables, Scope, and Hoisting in JavaScript](https://www.digitalocean.com/community/tutorials/understanding-variables-scope-hoisting-in-javascript) resource on DigitalOcean.
 
 | Keyword                                                                                       | Scope          | Hoisting | Can Be Reassigned | Can Be Redeclared |
 | --------------------------------------------------------------------------------------------- | -------------- | -------- | ----------------- | ----------------- |
