@@ -1,9 +1,17 @@
-# ES5 vs ES6
+## ES5 vs ES6
+
+## Variable declaration
 
 ```js
-// Variable declaration
+// ES5
 var x = 0;
+```
+
+```js
+// ES6 
 let x = 0;
+```
+
 
 // Constant declaration
 const X = 0;
@@ -138,4 +146,15 @@ const y = new Y(1, 2, 3);
 y.z();
 
 // modules
-```
+//<script src="export.js"></script>
+//<script type="module" src="import.js"></script>
+
+// export.js
+let x = y => y + y;
+let z = 0;
+
+export { x, z };
+
+// import.js
+import { x, z } from './export.js';
+console.log(x(3), z);
