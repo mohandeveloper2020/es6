@@ -53,7 +53,7 @@ var x = 0;
 let x = 0;
 ```
 
-- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- [MDN Reference: let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 
 ## Constant declaration
 
@@ -64,7 +64,7 @@ ES6 introduced the `const` keyword, which cannot be redeclared or reassigned, bu
 const CONST_IDENTIFIER = 0; // constants are uppercase by convention
 ```
 
-- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+- [MDN Reference: const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 
 ## Arrow functions
 
@@ -82,7 +82,7 @@ let func = a => {}         // parentheses optional with one parameter
 let func = (a, b, c) => {} // parentheses required with multiple parameters
 ```
 
-- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [MDN Reference: Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
 ## Template literals
 
@@ -100,7 +100,7 @@ var str = 'Release date: ' + date;
 let str = `Release Date: ${date}`;
 ```
 
-- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Expression_interpolation)
+- [MDN Reference: Expression interpolation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Expression_interpolation)
 
 ### Multi-line strings
 
@@ -120,7 +120,7 @@ let str = `This text
            multiple lines`;        
 ```
 
-- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Multi-line_strings)
+- [MDN Reference: Multi-line strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Multi-line_strings)
 
 ## Implicit returns
 
@@ -136,7 +136,7 @@ function func(a, b, c) { return a + b + c; }
 let func = (a, b, c) => a + b + c; // curly brackets must be omitted
 ```
 
-- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Function_body)
+- [MDN Reference: Function body](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Function_body)
 
 ## Key/property shorthand
 
@@ -158,7 +158,7 @@ let obj = {
 }
 ```
 
-- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Property_definitions)
+- [MDN Reference: Property definitions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Property_definitions)
 
 ## Method definition shorthand
 
@@ -184,7 +184,7 @@ let obj = {
 obj.a(); // call method a
 ```
 
-- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+- [MDN Reference: Method definitions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 
 ## Object matching shorthand
 
@@ -206,7 +206,7 @@ var c = obj.c;
 let {a, b, c} = obj;
 ```
 
-- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#New_notations_in_ECMAScript_2015)
+- [MDN Reference: Object initializer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#New_notations_in_ECMAScript_2015)
 
 ## Array iteration (looping)
 
@@ -230,7 +230,7 @@ for (let i of arr) {
 }
 ```
 
-- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- [MDN Reference: for...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ## Default parameters
 
@@ -256,7 +256,7 @@ func(10);   // returns 12
 func(10, 5) // returns 15
 ```
 
-- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [MDN Reference: Default paramters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
 
 ## Spread syntax
 
@@ -276,91 +276,99 @@ Spread syntax can be used for function arguments.
 ```js
 // ES6
 let arr1 = [1, 2, 3];
-
 let func = (a, b, c) => a + b + c;
-func(...arr1);
 
 console.log(func(...arr1);); // 6 
 ```
 
-- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [MDN Reference: Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 ## Classes/constructor functions
 
+ES6 introducess the `class` syntax on top of the prototype-based constructor function.
+
 ```js
 // ES5
-function ExampleConstructor(a, b) {
+function Func(a, b) {
     this.a = a;
     this.b = b;
 }
 
-ExampleConstructor.prototype.sum = function() {
+Func.prototype.getSum = function() {
     return this.a + this.b;
 }
 
-var example1 = new ExampleConstructor(3, 4);
+var x = new Func(3, 4);
 ```
 
 ```js
 // ES6
-class ExampleClass {
+class Func {
     constructor(a, b) {
         this.a = a;
         this.b = b;
     }
 
-    sum() {
+    getSum() {
         return this.a + this.b;
     }
 }
 
-let example1 = new ExampleClass(3, 4);
+let x = new Func(3, 4);
 ```
 
 ```js
-example1.sum(); // returns 7
+x.getSum(); // returns 7
 ```
 
+- [MDN Reference: Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
 ## Inheritance
+
+The `extends` keyword creates a subclass.
 
 ```js
 // ES5
 function Inheritance(a, b, c) {
-    ExampleConstructor.call(this, a, b);
+    Func.call(this, a, b);
 
     this.c = c;
 }
 
-Inheritance.prototype = Object.create(ExampleConstructor.prototype);
-Inheritance.prototype.product = function() {
+Inheritance.prototype = Object.create(Func.prototype);
+Inheritance.prototype.getProduct = function() {
     return this.a * this.b * this.c;
 }
 
-var example2 = new Inheritance(3, 4, 5);
+var y = new Inheritance(3, 4, 5);
 ```
 
 ```js
 // ES6
-class Inheritance extends ExampleClass {
+class Inheritance extends Func {
     constructor(a, b, c) {
         super(a, b);
 
         this.c = c;
     }
 
-    product() {
+    getProduct() {
         return this.a * this.b * this.c;
     }
 }
 
-const example2 = new Inheritance(3, 4, 5);
+let y = new Inheritance(3, 4, 5);
 ```
 
 ```js
-example2.product(); // 60
+y.getProduct(); // 60
 ```
 
+- [MDN Reference: Subclassing with extends](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Sub_classing_with_extends)
+
 ## Modules - export/import
+
+Modules can be created to export and import code between files.
 
 ```html
 <!-- index.html -->
@@ -382,3 +390,6 @@ export { func, obj, x };
 import { func, obj, x } from './export.js';
 console.log(func(3), obj, x);
 ```
+
+- [MDN Reference: export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
+- [MDN Reference: import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
