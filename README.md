@@ -127,8 +127,7 @@ ES6 introduces a shorter notation for assigning properties to variables of the s
 // ES5
 var obj = { 
     a: a, 
-    b: b, 
-    c: 0 
+    b: b
 }
 ```
 
@@ -136,8 +135,7 @@ var obj = {
 // ES6
 let obj = { 
     a, 
-    b, 
-    c: 0 
+    b
 }
 ```
 
@@ -162,7 +160,7 @@ let obj = {
 ```
 
 ```js
-obj.a();
+obj.a(); // call method a
 ```
 
 ## Object matching shorthand
@@ -187,7 +185,7 @@ let {a, b, c} = obj;
 
 ## Array iteration (looping)
 
-A more concise syntax has been introduced for iteration through arrays and other iterable objects. ([MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of))
+A more concise syntax has been introduced for iteration through arrays and other iterable objects. ()
 
 ```js
 var arr = [1, 2, 3];
@@ -206,6 +204,8 @@ for (let i of arr) {
     console.log(i);
 }
 ```
+
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ## Default parameters
 
