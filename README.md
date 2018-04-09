@@ -1,6 +1,6 @@
-# ES5 vs ES6 Syntax
+# ES6 Syntax
 
-## Quick reference
+## Quick reference and comparison with ES5 where applicable.
 
 > **Note:** I'll be using `let` in place of `var` for all ES6 examples.
 
@@ -13,7 +13,7 @@
 - Variable: `x`
 - String: `str`
 
-### Variables and constants
+### Variables and constant keyword comparison
 
 | Keyword                                                                                       | Scope          | Hoisting | Can Be Reassigned | Can Be Redeclared |
 | --------------------------------------------------------------------------------------------- | -------------- | -------- | ----------------- | ----------------- |
@@ -283,6 +283,7 @@ example.product(); // 60
 ### Modules 
 
 ```html
+// index.html
 <script src="export.js"></script>
 <script type="module" src="import.js"></script>
 ```
