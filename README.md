@@ -18,7 +18,7 @@ let x = 0;
 const X = 0;
 ```
 
-### Arrow Functions
+### Arrow functions
 
 ```js
 // ES5
@@ -29,30 +29,73 @@ var x = function(y) {}  // function expression
 ```js
 // ES6
 let x = y => {}         // parentheses optional with one parameter
-let x = (a, b, c) => {} 
+let x = (a, b, c) => {} // parentheses required with multiple parameters
 ```
 
-// Template literals
-var x = 'Release date: ' + date;
-let x = `Release Date: ${date}`;
+### Template literals
 
+#### Concatenation/string interpolation
+
+```js
+// ES5
+var x = 'Release date: ' + date;
+```
+
+```js
+// ES6
+let x = `Release Date: ${date}`;
+```
+
+#### Multi-line strings
+
+```js
+// ES5
 var x = 'This text ' +
         'is on ' +
         'multiple lines';
+```
 
+```js
+// ES6
 let x = `This text
          is on
          multiple lines`;        
+```
 
-// Implicit returns
+### Implicit returns
+
+```js
+// ES5
 function x(a, b, c) { return a + b + c; } 
-let x = (a, b, c) => a + b + c;
+```
 
-// Key/property shorthand
-var x = { a: a, b: b, c: 0 }
-let x = { a, b, c: 0 }
+```js
+// ES6
+let x = (a, b, c) => a + b + c; // curly brackets must be omitted
+```
 
-// Method properties shorthand
+
+### Key/property shorthand
+
+```js
+// ES5
+var x = { 
+    a: a, 
+    b: b, 
+    c: 0 
+}
+```
+
+```js
+// ES6
+let x = { 
+    a, 
+    b, 
+    c: 0 
+}
+```
+
+### Method properties shorthand
 var x = {
     a: function(c, d) {},
     b: function(e, f) {}
