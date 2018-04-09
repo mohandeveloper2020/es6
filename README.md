@@ -28,6 +28,7 @@ ECMAScript 2015, also known as ES6, introduced many changes to JavaScript. Here 
 - [Classes/constructor functions](#classesconstructor-functions)
 - [Inheritance](#inheritance)
 - [Modules - export/import](#modules---exportimport)
+- [Promises/callbacks](#promisescallbacks)
 
 ## Variables and constant feature comparison
 
@@ -394,3 +395,43 @@ console.log(func(3), obj, x);
 
 - [MDN Reference: export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
 - [MDN Reference: import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+
+## Promises/Callbacks
+
+Promises represent the completion of an asynchronous function. They can be used as an alternative to chaining functions.
+
+```js
+// ES5 callback
+function doSecond() {
+    console.log('Do second.');
+}
+
+function doFirst(callback) {
+    setTimeout(function() {
+        console.log('Do first.');
+
+        callback();
+    }, 500);
+}
+
+doFirst(doSecond);
+```
+
+```js
+// ES6 Promise
+let doSecond = () => {
+    console.log('Do second.');
+}
+
+let doFirst = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log('Do first.');
+        
+        resolve(doSecond);
+    }, 500);
+});
+  
+doFirst.then(doSecond);
+```
+
+- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
