@@ -1,6 +1,4 @@
-## ES5 vs ES6
-
-## Variable declaration
+### Variable declaration
 
 ```js
 // ES5
@@ -13,15 +11,26 @@ let x = 0;
 ```
 
 
-// Constant declaration
+### Constant declaration
+
+```js
+// ES6
 const X = 0;
+```
 
-// Arrow Functions
-function x(y) {}
-let x = y => {} // parentheses optional with one parameter
+### Arrow Functions
 
-function x(a, b, c) {} 
-let x = (a, b, c) => {}
+```js
+// ES5
+function x(y) {}        // function declaration
+var x = function(y) {}  // function expression
+```
+
+```js
+// ES6
+let x = y => {}         // parentheses optional with one parameter
+let x = (a, b, c) => {} 
+```
 
 // Template literals
 var x = 'Release date: ' + date;
