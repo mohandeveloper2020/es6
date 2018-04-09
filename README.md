@@ -1,4 +1,4 @@
-# ECMAScript6 Syntax Reference
+# ES6 Syntax and Feature Reference
 
 Quick ES6 reference and comparison with ES5 where applicable.
 
@@ -239,8 +239,6 @@ ExampleConstructor.prototype.sum = function() {
 }
 
 var example1 = new ExampleConstructor(3, 4);
-
-example1.sum(); // returns 7
 ```
 
 ```js
@@ -257,7 +255,9 @@ class ExampleClass {
 }
 
 let example1 = new ExampleClass(3, 4);
+```
 
+```js
 example1.sum(); // returns 7
 ```
 
@@ -277,7 +277,6 @@ Inheritance.prototype.product = function() {
 }
 
 var example2 = new Inheritance(3, 4, 5);
-example2.product(); // 60
 ```
 
 ```js
@@ -295,6 +294,9 @@ class Inheritance extends ExampleClass {
 }
 
 const example2 = new Inheritance(3, 4, 5);
+```
+
+```js
 example.product(); // 60
 ```
 
