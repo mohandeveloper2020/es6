@@ -434,4 +434,53 @@ let doFirst = new Promise((resolve, reject) => {
 doFirst.then(doSecond);
 ```
 
+An example below using `XMLHttpRequest`, for demonstrative purposes only ([Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) would be the proper modern API to use).
+
+```
+// ES5 callback
+function makeRequest(method, url, callback) {
+    var request = new XMLHttpRequest();
+
+    request.open(method, url);
+    request.onload = function () {
+        callback(null, request.response);
+    };
+    request.onerror = function () {
+        callback(request.response);
+    };
+    request.send();
+}
+
+makeRequest('GET', 'https://url.json', function (err, data) {
+        if (err) { 
+            throw new Error(err);
+        } else {
+            console.log(data);
+        }
+    }
+);
+```
+
+```js
+// ES6 Promise
+function makeRequest(method, url) {
+    return new Promise((resolve, reject) => {
+        let request = new XMLHttpRequest();
+
+        request.open(method, url);
+        request.onload = resolve;
+        request.onerror = reject;
+        request.send();
+    });
+}
+
+makeRequest('GET', 'https://url.json')
+.then(event => {
+    console.log(event.target.response);
+})
+.catch(err => {
+    throw new Error(err);
+});
+```
+
 - [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
