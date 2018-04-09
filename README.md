@@ -1,16 +1,16 @@
 # ES6 Syntax and Feature Reference
 
-Quick reference of ES6, also known as ECMAScript 2015, and comparison with ES5 where applicable.
+ECMAScript 2015, also known as ES6, introduced many changes to JavaScript. Here is an overview of some of the most common features and syntactical differences, with comparisons to ES5 where applicable.
 
 > **Note:** I'll be using `let` in place of `var` for all ES6 examples.
 
 ## Key
 
+- Variable: `x`
 - Object: `obj`
 - Array: `arr`
 - Function: `func`
 - Parameter, method: `a`, `b`, `c`
-- Variable: `x`
 - String: `str`
 
 ## Table of contents
@@ -89,7 +89,7 @@ let str = `Release Date: ${date}`;
 
 ### Multi-line strings
 
-Using template literal syntax, a JavaScript string can span multiple lines without the need for concatenation. ([MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Multi-line_strings))
+Using template literal syntax, a JavaScript string can span multiple lines without the need for concatenation. 
 
 ```js
 // ES5
@@ -105,9 +105,11 @@ let str = `This text
            multiple lines`;        
 ```
 
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Multi-line_strings)
+
 ## Implicit returns
 
-The `return` keyword is implied and can be omitted if using arrow functions without a block body. ([MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Function_body))
+The `return` keyword is implied and can be omitted if using arrow functions without a block body.
 
 ```js
 // ES5
@@ -119,9 +121,11 @@ function func(a, b, c) { return a + b + c; }
 let func = (a, b, c) => a + b + c; // curly brackets must be omitted
 ```
 
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Function_body)
+
 ## Key/property shorthand
 
-ES6 introduces a shorter notation for assigning properties to variables of the same name. ([MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Property_definitions))
+ES6 introduces a shorter notation for assigning properties to variables of the same name. 
 
 ```js
 // ES5
@@ -139,9 +143,11 @@ let obj = {
 }
 ```
 
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Property_definitions)
+
 ## Method definition shorthand
 
-The `function` keyword can be omitted when assigning methods on an object. ([MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions))
+The `function` keyword can be omitted when assigning methods on an object.
 
 ```js
 // ES5
@@ -163,9 +169,11 @@ let obj = {
 obj.a(); // call method a
 ```
 
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+
 ## Object matching shorthand
 
-Use curly brackets to assign properties of an object to their own variable. ([MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#New_notations_in_ECMAScript_2015))
+Use curly brackets to assign properties of an object to their own variable. 
 
 ```js
 var obj = { a: 1, b: 2, c: 3 };
@@ -183,9 +191,11 @@ var c = obj.c;
 let {a, b, c} = obj;
 ```
 
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#New_notations_in_ECMAScript_2015)
+
 ## Array iteration (looping)
 
-A more concise syntax has been introduced for iteration through arrays and other iterable objects. ()
+A more concise syntax has been introduced for iteration through arrays and other iterable objects.
 
 ```js
 var arr = [1, 2, 3];
