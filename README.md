@@ -4,7 +4,7 @@ ECMAScript 2015, also known as ES6, introduced many changes to JavaScript. Here 
 
 > **Note:** A commonly accepted practice is to use `const` unless except in cases of loops and reassignment. However, in this resource I'll be using `let` in place of `var` for all ES6 examples.
 
-## Key
+## Legend
 
 - Variable: `x`
 - Object: `obj`
