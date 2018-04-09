@@ -1,6 +1,6 @@
 # ES6 Syntax and Feature Reference
 
-Quick ES6 reference and comparison with ES5 where applicable.
+Quick reference of ES6, also known as ECMAScript 2015, and comparison with ES5 where applicable.
 
 > **Note:** I'll be using `let` in place of `var` for all ES6 examples.
 
@@ -21,7 +21,7 @@ Quick ES6 reference and comparison with ES5 where applicable.
 - [Template literals](#template-literals)
 - [Implicit returns](#implicit-returns)
 - [Key/property shorthand](#key-property-shorthand)
-- [Method properties shorthand](#method-properties-shorthand)
+- [Method definition shorthand](#method-properties-shorthand)
 - [Looping through an array](#looping-through-an-array)
 - [Default parameters](#default-parameters)
 - [Spread operator](#spread-operator)
@@ -102,6 +102,10 @@ let str = `This text
 
 ## Implicit returns
 
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Function_body)
+
+The `return` keyword is implied and can be omitted if using arrow functions without a block body.
+
 ```js
 // ES5
 function func(a, b, c) { return a + b + c; } 
@@ -113,6 +117,10 @@ let func = (a, b, c) => a + b + c; // curly brackets must be omitted
 ```
 
 ## Key/property shorthand
+
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Property_definitions)
+
+ES6 introduces a shorter notation for assigning properties to variables of the same name.
 
 ```js
 // ES5
@@ -132,7 +140,11 @@ let obj = {
 }
 ```
 
-## Method properties shorthand
+## Method definition shorthand
+
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+
+The `function` keyword can be omitted when assigning methods on an object.
 
 ```js
 // ES5
@@ -155,6 +167,10 @@ obj.a();
 ```
 
 ## Object matching shorthand
+
+[MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#New_notations_in_ECMAScript_2015)
+
+Use curly brackets to assign properties of an object to their own variable.
 
 ```js
 var obj = { a: 1, b: 2, c: 3 };
