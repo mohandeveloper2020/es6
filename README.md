@@ -1,3 +1,9 @@
+# ES5 vs ES6 Syntax
+
+Quick reference
+
+> **Note:** I'll be using `let` in place of `var` for all ES6 examples.
+
 ### Variable declaration
 
 ```js
@@ -15,7 +21,7 @@ let x = 0;
 
 ```js
 // ES6
-const X = 0;
+const X = 0; // constants are uppercase by convention
 ```
 
 ### Arrow functions
@@ -96,49 +102,90 @@ let x = {
 ```
 
 ### Method properties shorthand
+
+```js
+// ES5
 var x = {
     a: function(c, d) {},
     b: function(e, f) {}
 };
+```
 
+```js
+// ES6
 let x = {
     a(c, d) {},
     b(e, f) {}
 }
+```
 
-// Object matching shorthand
-var x = { a : 1, b : 2, c : 3 };
+### Object matching shorthand
 
+```js
+var x = { a: 1, b: 2, c: 3 };
+```
+
+```js
+// ES5
 var a = x.a;
 var b = x.b;
 var c = x.c;
+```
 
+```js
+// ES6
 let {a, b, c} = x;
+```
 
-// for of (array)
+### Looping through an array
+
+```js
 var x = [1, 2, 3];
+```
 
+```js
+// ES5
 for (var i = 0; i < x.length; i++) {
     console.log(i);
 }
+```
+
+```js
+// ES6
 for (let i of x) {
     console.log(i);
 }
+```
 
-// Default parameters
-let x = (a, b = 2) => {
-    console.log(a + b);
-}
+### Default parameters
+
+```js
+// ES5
 var x = function(a, b) {
     b = (b === undefined) ? 2 : b;
-    console.log(a + b);
+    return a + b;
 }
-x(1);
+```
 
-// Spread operator
+```js
+// ES6
+let x = (a, b = 2) => {
+    return a + b;
+}
+```
+
+```js
+x(10);   // returns 12
+x(10, 5) // returns 15
+```
+
+### Spread operator
+
+```js
 let x = [1, 2, 3];
 let y = ['a', 'b', 'c'];
 let z = [...x, ...y];
+```
 
 console.log(z);
 
