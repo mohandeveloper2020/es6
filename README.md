@@ -388,6 +388,7 @@ export { func, obj, x };
 ```js
 // import.js
 import { func, obj, x } from './export.js';
+
 console.log(func(3), obj, x);
 ```
 
