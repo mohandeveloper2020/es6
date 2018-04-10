@@ -22,7 +22,7 @@ ECMAScript 2015, also known as ES6, introduced many changes to JavaScript. Here 
 - [Implicit returns](#implicit-returns)
 - [Key/property shorthand](#keyproperty-shorthand)
 - [Method definition shorthand](#method-properties-shorthand)
-- [Destructuring (object matching][#destructuring)
+- [Destructuring (object matching)](#destructuring)
 - [Array iteration (looping)](#array-iteration-looping)
 - [Default parameters](#default-parameters)
 - [Spread syntax](#spread-syntax)
